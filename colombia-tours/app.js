@@ -36,17 +36,23 @@ document.addEventListener('DOMContentLoaded', () => {
       privatePrice: 720,
       lunchCost: 80
     },
-    'grand-10day': {
-      name: '10-Day Grand Colombia Highlights Tour',
-      sharedPrice: 990,
-      privatePrice: 1350,
-      lunchCost: 150
+    'tatacoa-5day': {
+      name: '5-Day Ancestors Route: Tatacoa & San Agustín',
+      sharedPrice: 460,
+      privatePrice: 620,
+      lunchCost: 70
     },
     'parque-cafe': {
       name: 'Coffee Park & Quindío Day Tour',
       sharedPrice: 110,
       privatePrice: 160,
       lunchCost: 20
+    },
+    'grand-10day': {
+      name: '10-Day Grand Colombia Highlights Tour',
+      sharedPrice: 990,
+      privatePrice: 1350,
+      lunchCost: 150
     }
   };
 

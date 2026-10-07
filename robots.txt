@@ -1,0 +1,33 @@
+# ==========================================================================
+# ROBOTS.TXT - TRANSFERS & TOURS COLOMBIA (https://transferstours.vip)
+# Optimized for Traditional Search Engines (Google, Bing) & AI Crawlers (Perplexity, ChatGPT, Claude)
+# ==========================================================================
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Disallow: /supabase/
+Disallow: /scratch/
+Disallow: /template/
+
+# AI Crawlers & Generative Engine Optimization (GEO) Explicit Permissions
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# XML Sitemap Index
+Sitemap: https://transferstours.vip/sitemap.xml

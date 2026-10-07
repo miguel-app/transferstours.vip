@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-924615238"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-924615238');
+    </script>
+    <!-- Event snippet for TechSol - Botón Whatsapp  57718 conversion page -->
+    <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-924615238/32FZCNHNvskcEMaE8rgD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1703033940132796');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1703033940132796&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title id="seo-title">{{SEO_TITLE}}</title>
+    <meta name="description" id="seo-meta-desc" content="{{SEO_META_DESC}}" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Geo Meta-tags (Local SEO / Map Coordinates) -->
+    <meta name="geo.position" content="{{GEO_POSITION}}" />
+    <meta name="geo.region" content="{{GEO_REGION}}" />
+    <meta name="geo.placename" content="{{GEO_PLACENAME}}" />
+    
+    <!-- Canonical and Hreflang links -->
+    {{CANONICAL_LINKS}}
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" id="og-title" content="{{SEO_TITLE}}" />
+    <meta property="og:description" id="og-desc" content="{{SEO_META_DESC}}" />
+    <meta property="og:image" content="https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg" />
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Google Structured Data (JSON-LD Schema) -->
+    {{JSON_LD_SCHEMA}}
+
+    <!-- Inline Tour Configuration Data -->
+    {{TOUR_DATA}}
+  </head>
+  <body>
+    <!-- ==========================================================================
+         HEADER / NAVIGATION (Brand & Localization Switcher)
+         ========================================================================== -->
+    <header class="header">
+      <div class="container">
+        <a href="../" class="logo" id="header-logo-link">
+          <img src="https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg" alt="Transfers & Tours Colombia Logo" width="160" height="50" decoding="async" />
+        </a>
+        
+        <div class="header-actions">
+          <!-- Phone Link -->
+          <a href="https://wa.me/573146644303?text=Hola%20Quiero%20Cotizar" class="contact-phone" id="header-phone-link" onclick="if(typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-924615238/32FZCNHNvskcEMaE8rgD'}); } if(typeof fbq === 'function') { fbq('track', 'Contact'); }">
+            <i class="fab fa-whatsapp"></i>
+            <span>+57 314 6644303</span>
+          </a>
+          
+          <!-- Language Switcher -->
+          <div class="lang-switch">
+            <button class="lang-btn active" id="lang-es">ES</button>
+            <button class="lang-btn" id="lang-en">EN</button>
+            <button class="lang-btn" id="lang-pt">PT</button>
+            <button class="lang-btn" id="lang-de">DE</button>
+          </div>
+
+          <a href="#quote-calculator" class="btn btn-primary" id="nav-quote-btn" data-i18n="btn-quote-now">Cotizar Ahora</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ==========================================================================
+           HERO SECTION (Visual Hook & Conversion Form)
+           ========================================================================== -->
+      <section class="hero" id="hero-banner" style="background-image: linear-gradient(135deg, rgba(7, 12, 37, 0.65) 0%, rgba(2, 42, 146, 0.5) 100%), url('{{HERO_IMAGE}}');">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Text and Badges -->
+            <div class="hero-content">
+              <h1 id="main-hero-title" data-i18n="hero-h1">{{HERO_H1}}</h1>
+              <p class="tagline" id="main-hero-tagline" data-i18n="hero-tagline">{{HERO_TAGLINE}}</p>
+              
+              <div class="hero-badges">
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="hero-badge-1">{{HERO_BADGE_1}}</span>
+                </div>
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="hero-badge-2">{{HERO_BADGE_2}}</span>
+                </div>
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="hero-badge-3">{{HERO_BADGE_3}}</span>
+                </div>
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span data-i18n="hero-badge-4">{{HERO_BADGE_4}}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Conversion Form -->
+            <div class="hero-form-container">
+              <h3 data-i18n="form-title">Cotizar o Reservar Circuito</h3>
+              <p data-i18n="form-subtitle">Registra tus datos de viaje para recibir asesoría personalizada en menos de 5 minutos.</p>
+              
+              <form id="hero-lead-form">
+                <div class="form-group">
+                  <label for="hero-name" data-i18n="lbl-name">Nombre Completo</label>
+                  <input type="text" id="hero-name" class="form-control" required placeholder="Ej: Juan Pérez" data-i18n="ph-name" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="hero-email" data-i18n="lbl-email">Correo Electrónico</label>
+                  <input type="email" id="hero-email" class="form-control" required placeholder="juan@correo.com" data-i18n="ph-email" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="hero-phone" data-i18n="lbl-phone">WhatsApp / Celular</label>
+                  <input type="tel" id="hero-phone" class="form-control" required placeholder="Ej: +57 300 123 4567" data-i18n="ph-phone" />
+                </div>
+                
+                <div class="form-group">
+                  <label for="hero-date" data-i18n="lbl-date">Fecha de Viaje</label>
+                  <input type="date" id="hero-date" class="form-control" required />
+                </div>
+
+                <button type="submit" class="btn btn-accent form-submit-btn btn-full" id="hero-submit-button">
+                  <span data-i18n="btn-submit-hero">Reservar Mi Circuito Ahora</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <p class="form-microcopy"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="cancellation-policy">Cancelación gratuita hasta 24 horas antes</span></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TRUST BAR / CREDENTIALS (E-E-A-T Signal)
+           ========================================================================== -->
+      <section class="trust-badges" id="trust-bar">
+        <div class="container">
+          <div class="badges-grid">
+            <div class="badge-card">
+              <i class="fa-solid fa-plane-arrival"></i>
+              <div>
+                <h4 data-i18n="badge-1-title">{{BADGE_1_TITLE}}</h4>
+                <p data-i18n="badge-1-desc">{{BADGE_1_DESC}}</p>
+              </div>
+            </div>
+            <div class="badge-card">
+              <i class="fa-solid fa-route"></i>
+              <div>
+                <h4 data-i18n="badge-2-title">{{BADGE_2_TITLE}}</h4>
+                <p data-i18n="badge-2-desc">{{BADGE_2_DESC}}</p>
+              </div>
+            </div>
+            <div class="badge-card">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <h4 data-i18n="badge-3-title">{{BADGE_3_TITLE}}</h4>
+                <p data-i18n="badge-3-desc">{{BADGE_3_DESC}}</p>
+              </div>
+            </div>
+            <div class="badge-card">
+              <i class="fa-solid fa-bed"></i>
+              <div>
+                <h4 data-i18n="badge-4-title">{{BADGE_4_TITLE}}</h4>
+                <p data-i18n="badge-4-desc">{{BADGE_4_DESC}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           INTRO SECTION (Geography & Destination Context)
+           ========================================================================== -->
+      <section class="seo-intro-section" id="about-tour">
+        <div class="container">
+          {{AEO_SNIPPET_BOX}}
+
+          <div class="seo-intro-grid">
+            <div class="seo-text">
+              <h2 style="margin-bottom: 24px;" data-i18n="intro-title">{{INTRO_TITLE}}</h2>
+              <p data-i18n="intro-desc-1">{{INTRO_DESC_1}}</p>
+              <p data-i18n="intro-desc-2">{{INTRO_DESC_2}}</p>
+              <p data-i18n="intro-desc-3">{{INTRO_DESC_3}}</p>
+            </div>
+            <div class="seo-img">
+              <img src="{{INTRO_IMAGE}}" alt="Experiencia de viaje" />
+            </div>
+          </div>
+
+          {{GEO_SPECS_TABLE}}
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           ITINERARY SECTION (Day-by-day Accordion with Rich Visuals)
+           ========================================================================== -->
+      <section class="itinerary-section" id="itinerary">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="itinerary-title">Cronograma Detallado</h2>
+            <p data-i18n="itinerary-subtitle">{{ITINERARY_SUBTITLE}}</p>
+          </div>
+          <div class="itinerary-container" id="itinerary-main-accordion">
+            {{ITINERARY_ACCORDION}}
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           INCLUSIONS & EXCLUSIONS (CRO & Transparency Layout)
+           ========================================================================== -->
+      <section class="inclusions-section" id="inclusions">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="inc-title">Detalle de Inclusiones del Servicio</h2>
+            <p data-i18n="inc-subtitle">Transparencia absoluta sobre la cobertura de tu circuito turístico.</p>
+          </div>
+
+          <div class="inc-grid">
+            <!-- Incluye -->
+            <div class="inc-box inc-box-included">
+              <h3 data-i18n="inc-box-included"><i class="fa-solid fa-circle-check"></i> Servicios Incluidos</h3>
+              <ul class="inc-list">
+                {{INCLUSIONS_LIST}}
+              </ul>
+            </div>
+
+            <!-- No Incluye -->
+            <div class="inc-box inc-box-not-included">
+              <h3 data-i18n="inc-box-not-included"><i class="fa-solid fa-circle-xmark"></i> No Incluye</h3>
+              <ul class="inc-list">
+                {{EXCLUSIONS_LIST}}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           DYNAMIC CALCULATOR (CRO & Instant Interactive Gratification)
+           ========================================================================== -->
+      <section class="calculator-section" id="quote-calculator">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="calc-title">{{CALC_TITLE}}</h2>
+            <p data-i18n="calc-subtitle">{{CALC_SUBTITLE}}</p>
+          </div>
+
+          <div class="calc-grid">
+            <!-- Controles de la Calculadora -->
+            <div class="calc-panel">
+              <h3 data-i18n="calc-summary-title">Resumen de tu Circuito</h3>
+              
+              <div class="calc-control">
+                <label data-i18n="calc-travelers-lbl">Número de Viajeros</label>
+                <div class="travelers-selector">
+                  <button type="button" class="btn-counter" id="btn-minus">-</button>
+                  <span id="calc-travelers-count">2</span>
+                  <button type="button" class="btn-counter" id="btn-plus">+</button>
+                </div>
+              </div>
+
+              <div class="calc-control">
+                <label data-i18n="calc-service-lbl">Hotel e Itinerario</label>
+                <div class="option-selectors">
+                  <div class="option-card active" id="opt-alejandria">
+                    <div class="option-info">
+                      <span class="option-title" data-i18n="calc-title-alejandria">{{CALC_TITLE_ALEJANDRIA}}</span>
+                      <span class="option-desc" data-i18n="calc-desc-alejandria">{{CALC_DESC_ALEJANDRIA}}</span>
+                    </div>
+                  </div>
+                  <div class="option-card" id="opt-eutopiq">
+                    <div class="option-info">
+                      <span class="option-title" data-i18n="calc-title-eutopiq">{{CALC_TITLE_EUTOPIQ}}</span>
+                      <span class="option-desc" data-i18n="calc-desc-eutopiq">{{CALC_DESC_EUTOPIQ}}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pantalla de Precio y CTA -->
+            <div class="calc-display-card">
+              <div class="calc-display-header">
+                <h4 data-i18n="calc-package-title">Circuito Completo 4 Días / 3 Noches</h4>
+                <h2 data-i18n="calc-total-lbl">Total de la Reserva:</h2>
+              </div>
+              
+              <div class="calc-price-wrap">
+                <span class="price-value-large" id="total-price-value">$1,160 USD</span>
+                <span class="price-unit"><span data-i18n="calc-price-lbl">Precio por Persona:</span> <strong id="price-value">$580 USD</strong></span>
+              </div>
+
+              <!-- Alerta de Descuento -->
+              <div class="calc-saving-alert" id="calc-saving-info">
+                <i class="fa-solid fa-circle-info"></i>
+                <span data-i18n="calc-no-saving">Tarifa estándar garantizada para grupos de 1 a 4 personas.</span>
+              </div>
+
+              <button type="button" class="btn btn-accent btn-full" id="calc-book-btn">
+                <i class="fab fa-whatsapp"></i>
+                <span data-i18n="btn-book">Reservar en WhatsApp</span>
+              </button>
+              <p class="form-microcopy"><i class="fa-solid fa-clock-rotate-left"></i> <span data-i18n="cancellation-policy">Cancelación gratuita hasta 24 horas antes</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           TESTIMONIALS SECTION (E-E-A-T & Social Proof)
+           ========================================================================== -->
+      <section class="testimonials-section" id="reviews">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="test-title">{{TEST_TITLE}}</h2>
+            <p data-i18n="test-subtitle">{{TEST_SUBTITLE}}</p>
+          </div>
+
+          <div class="testimonials-grid">
+            <!-- Opinion 1 -->
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p data-i18n="test-1-text">{{TEST_1_TEXT}}</p>
+              <div class="author-info">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Paula Restrepo" />
+                <div class="author-meta">
+                  <h4>Paula Restrepo</h4>
+                  <span>Bogotá, Colombia</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Opinion 2 -->
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p data-i18n="test-2-text">{{TEST_2_TEXT}}</p>
+              <div class="author-info">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Mark Thompson" />
+                <div class="author-meta">
+                  <h4>Mark Thompson</h4>
+                  <span>Houston, USA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Opinion 3 -->
+            <div class="testimonial-card">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p data-i18n="test-3-text">{{TEST_3_TEXT}}</p>
+              <div class="author-info">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Beatriz da Silva" />
+                <div class="author-meta">
+                  <h4>Beatriz da Silva</h4>
+                  <span>São Paulo, Brasil</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           FAQS SECTION
+           ========================================================================== -->
+      <section class="faqs-section" id="faqs">
+        <div class="container">
+          <div class="section-header">
+            <h2 data-i18n="faq-title">Preguntas Frecuentes del Circuito</h2>
+            <p data-i18n="faq-subtitle">Resolvemos tus dudas operativas para que planees tu visita con tranquilidad.</p>
+          </div>
+
+          <div class="faqs-container">
+            {{FAQS_LIST}}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2026 Transfers & Tours Colombia. Operador Local Registrado B2C / B2B - <strong>RNT N° 44180</strong>. Todos los derechos reservados.</p>
+          <div class="footer-bottom-links">
+            <a href="#" id="footer-terms">Términos B2C</a>
+            <a href="#" id="footer-privacy">Privacidad de Datos</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================================
+         TOAST POPUP (Success notifications)
+         ========================================================================== -->
+    <div class="toast" id="success-toast">
+      <i class="fa-solid fa-circle-check"></i>
+      <div class="toast-msg">
+        <h4 data-i18n="toast-success-title">¡Solicitud Enviada!</h4>
+        <p data-i18n="toast-success-msg">Conectando con un asesor por WhatsApp para finalizar tu reserva.</p>
+      </div>
+    </div>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-widget">
+      <div class="wa-tooltip" data-i18n="whatsapp-tooltip">¿Preguntas? Chatea con nosotros</div>
+      <a href="https://wa.me/573146644303?text=Hola%20Transfers%20%26%20Tours.%20Me%20interesa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tours." target="_blank" class="wa-button" onclick="if(typeof gtag === 'function') { gtag('event', 'conversion', {'send_to': 'AW-924615238/32FZCNHNvskcEMaE8rgD'}); } if(typeof fbq === 'function') { fbq('track', 'Contact'); }">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
+    <!-- Local Application Javascript Logic -->
+    <script src="app.js" charset="UTF-8" defer></script>
+  </body>
+</html>

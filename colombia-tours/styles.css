@@ -1,0 +1,1040 @@
+/* ==========================================================================
+   DESIGN SYSTEM & VARIABLES (Transfers & Tours Colombia - Master English Hub)
+   ========================================================================== */
+
+:root {
+  /* Colors - Premium Colombia Travel Palette */
+  --color-primary: #022a92;       /* Deep Trust Navy */
+  --color-primary-hover: #011d66;
+  --color-accent: #cd2653;        /* Vibrant Coral Red */
+  --color-accent-hover: #b01f44;
+  --color-gold: #d4af37;          /* Emerald Gold Highlight */
+  --color-dark: #070c25;          /* Deep Slate Black */
+  --color-muted: #5a6275;         /* Neutral Gray */
+  --color-light: #f4f7fc;         /* Crisp Light Background */
+  --color-white: #ffffff;
+  --color-success: #10b981;       /* Mint Green Success */
+  --color-card-bg: #ffffff;
+  
+  /* Fonts & Shadows */
+  --font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --shadow-sm: 0 2px 6px rgba(7, 12, 37, 0.04);
+  --shadow-md: 0 10px 25px rgba(7, 12, 37, 0.08);
+  --shadow-lg: 0 20px 40px rgba(7, 12, 37, 0.12);
+  --shadow-accent: 0 10px 25px rgba(205, 38, 83, 0.25);
+  
+  /* Borders & Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ==========================================================================
+   BASE RESET & TYPOGRAPHY
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 span, h2 span {
+  color: var(--color-gold);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   BUTTONS & BADGES
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: var(--shadow-accent);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-hover);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(205, 38, 83, 0.35);
+}
+
+.btn-whatsapp-direct {
+  background-color: #25d366;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.btn-whatsapp-direct:hover {
+  background-color: #1eb956;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(7, 12, 37, 0.08);
+  padding: 14px 0;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.contact-phone i {
+  color: #25d366;
+  font-size: 1.25rem;
+}
+
+.rnt-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(2, 42, 146, 0.06);
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, #070c25 0%, #022a92 100%);
+  color: var(--color-white);
+  padding: 80px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.hero-content h1 span {
+  color: var(--color-gold);
+}
+
+.hero-content .tagline {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.hero-badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.hero-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-badge-item i {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+}
+
+.hero-badge-item span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Hero Form Card */
+.hero-form-container {
+  background: #ffffff;
+  color: var(--color-dark);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-form-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.hero-form-container p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(2, 42, 146, 0.15);
+}
+
+select.form-control {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-microcopy {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ==========================================================================
+   TRUST BAR
+   ========================================================================== */
+.trust-badges {
+  background: var(--color-white);
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(7, 12, 37, 0.06);
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.badge-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.badge-card i {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  background: rgba(2, 42, 146, 0.08);
+  padding: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.badge-card h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.badge-card p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   AEO AI SNIPPET BOX
+   ========================================================================== */
+.aeo-snippet-box {
+  background: linear-gradient(135deg, rgba(2, 42, 146, 0.04) 0%, rgba(212, 175, 55, 0.08) 100%);
+  border-left: 4px solid var(--color-primary);
+  padding: 24px;
+  border-radius: var(--radius-sm);
+  margin: 30px 0;
+}
+
+.aeo-snippet-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.aeo-snippet-badge {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.aeo-snippet-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.aeo-snippet-text {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--color-dark);
+}
+
+.citation-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(2, 42, 146, 0.3);
+}
+
+.citation-link:hover {
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   TOUR CATALOG & CATEGORY FILTER
+   ========================================================================== */
+.catalog-section {
+  background-color: var(--color-light);
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 30px;
+  border: 1px solid #d1d5db;
+  background: var(--color-white);
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tab-btn:hover, .tab-btn.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.tour-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(7, 12, 37, 0.06);
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.tour-img-wrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.tour-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-img-wrap img {
+  transform: scale(1.05);
+}
+
+.tour-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(7, 12, 37, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tour-duration {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background: var(--color-gold);
+  color: var(--color-dark);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.tour-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tour-card-body h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.tour-card-body p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.tour-highlights-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tour-highlight-badge {
+  background: rgba(2, 42, 146, 0.06);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.tour-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f0f2f5;
+  padding-top: 16px;
+}
+
+.tour-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-price-from {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+.tour-price-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+/* ==========================================================================
+   TECHNICAL SPECS TABLE (GEO/LLMO)
+   ========================================================================== */
+.tech-specs-table-wrapper {
+  overflow-x: auto;
+  margin: 30px 0;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.tech-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+}
+
+.tech-specs-table th {
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px;
+  font-weight: 600;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.tech-specs-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 0.9rem;
+}
+
+.tech-specs-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   DYNAMIC USD FARE CALCULATOR
+   ========================================================================== */
+.calculator-section {
+  background: linear-gradient(135deg, #070c25 0%, #022a92 100%);
+  color: var(--color-white);
+}
+
+.calculator-section .section-header h2 {
+  color: var(--color-white);
+}
+
+.calculator-section .section-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 40px;
+  align-items: start;
+}
+
+.calc-panel {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+}
+
+.calc-control {
+  margin-bottom: 24px;
+}
+
+.calc-control label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.travelers-selector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.btn-counter {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.btn-counter:hover {
+  background: var(--color-accent-hover);
+}
+
+#calc-travelers-count {
+  font-size: 1.3rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: center;
+}
+
+.option-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.option-card:hover, .option-card.selected {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--color-gold);
+}
+
+.option-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.option-desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.option-price-tag {
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+/* Calculator Summary Card */
+.calc-display-card {
+  background: #ffffff;
+  color: var(--color-dark);
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.calc-display-header h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  letter-spacing: 1px;
+}
+
+.calc-display-header h2 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+}
+
+.price-value-large {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  display: block;
+}
+
+.price-unit {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.calc-saving-alert {
+  background: rgba(16, 185, 129, 0.1);
+  color: #065f46;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   FAQS ACCORDION (AEO FOCUS)
+   ========================================================================== */
+.faqs-section {
+  background: var(--color-white);
+}
+
+.faqs-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 20px 0;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-question h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.faq-toggle i {
+  transition: transform 0.3s ease;
+  color: var(--color-primary);
+}
+
+.faq-item.open .faq-toggle i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.faq-answer p {
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+  background: var(--color-dark);
+  color: #9ca3af;
+  padding: 60px 0 30px;
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: #9ca3af;
+}
+
+.footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+  z-index: 999;
+  transition: var(--transition);
+}
+
+.whatsapp-floating:hover {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .badges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  section {
+    padding: 45px 0;
+  }
+
+  .header .container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .rnt-badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.85rem;
+    line-height: 1.2;
+  }
+
+  .hero-content .tagline {
+    font-size: 1rem;
+  }
+
+  .hero-form-container {
+    padding: 22px 18px;
+  }
+
+  .calc-panel, .calc-display-card {
+    padding: 22px 18px;
+  }
+
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-badges {
+    grid-template-columns: 1fr;
+  }
+
+  .category-tabs {
+    gap: 8px;
+  }
+
+  .tab-btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

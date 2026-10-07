@@ -57,12 +57,12 @@
     
     <!-- Canonical and Hreflang links -->
     
-    <link rel="canonical" href="https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/" />
-    <link rel="alternate" hreflang="es" href="https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/" />
-    <link rel="alternate" hreflang="en" href="https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/?lang=en" />
-    <link rel="alternate" hreflang="pt" href="https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/?lang=pt" />
-    <link rel="alternate" hreflang="de" href="https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/?lang=de" />
-    <link rel="alternate" hreflang="x-default" href="https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/" />
+    <link rel="canonical" href="https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/" />
+    <link rel="alternate" hreflang="es" href="https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/" />
+    <link rel="alternate" hreflang="en" href="https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/?lang=en" />
+    <link rel="alternate" hreflang="pt" href="https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/?lang=pt" />
+    <link rel="alternate" hreflang="de" href="https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/" />
 
 
     <!-- Open Graph (Social Sharing) -->
@@ -78,7 +78,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Local Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
@@ -87,86 +88,127 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "Circuito Bogotá + Eje Cafetero: 5 Días / 4 Noches",
-  "description": "El circuito definitivo de viaje combinando la capital y el corazón cafetero de Colombia. Incluye vuelos internos, traslados privados, 4 noches de hotel con desayunos, tours y asistencia médica.",
-  "touristType": "Leisure, Adventure",
-  "duration": "P5D",
-  "itinerary": {
-    "@type": "ItemList",
-    "numberOfItems": 5,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Llegada a Bogotá + City Tour",
-          "description": "Recepción privada en el Aeropuerto Internacional El Dorado (BOG) y traslado a tu hotel. En la tarde, realizaremos el City Tour de Bogotá de 4 a 5 hora..."
-        }
+  "@graph": [
+    {
+      "@type": "TouristTrip",
+      "name": "Circuito Bogotá + Eje Cafetero: 5 Días / 4 Noches",
+      "description": "El circuito definitivo de viaje combinando la capital y el corazón cafetero de Colombia. Incluye vuelos internos, traslados privados, 4 noches de hotel con desayunos, tours y asistencia médica.",
+      "touristType": "Leisure, Adventure",
+      "duration": "P5D",
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": 5,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Llegada a Bogotá + City Tour",
+              "description": "Recepción privada en el Aeropuerto Internacional El Dorado (BOG) y traslado a tu hotel. En la tarde, realizaremos el City Tour de Bogotá de 4 a 5 hora..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Catedral de Sal + Vuelo al Eje Cafetero",
+              "description": "Desayuno en el hotel. En la mañana, visitaremos la Catedral de Sal de Zipaquirá, una joya arquitectónica construida en socavones de sal. Tras el recor..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Salento + Valle de Cocora",
+              "description": "Desayuno en el hotel. Salida en transporte compartido hacia el Valle de Cocora en la cordillera central. Realizaremos una caminata entre palmas de cer..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Experiencia Recuca + Filandia",
+              "description": "Desayuno en el hotel. Disfrutaremos del tour en Recuca (Recorrido de la Cultura Cafetera), vistiéndonos de arrieros y recolectando café en un ambiente..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Retorno a Bogotá",
+              "description": "Desayuno en el hotel. A la hora programada, traslado privado al aeropuerto de Pereira para abordar el vuelo de regreso a Bogotá, donde finalizará nues..."
+            }
+          }
+        ]
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Catedral de Sal + Vuelo al Eje Cafetero",
-          "description": "Desayuno en el hotel. En la mañana, visitaremos la Catedral de Sal de Zipaquirá, una joya arquitectónica construida en socavones de sal. Tras el recor..."
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Salento + Valle de Cocora",
-          "description": "Desayuno en el hotel. Salida en transporte compartido hacia el Valle de Cocora en la cordillera central. Realizaremos una caminata entre palmas de cer..."
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Experiencia Recuca + Filandia",
-          "description": "Desayuno en el hotel. Disfrutaremos del tour en Recuca (Recorrido de la Cultura Cafetera), vistiéndonos de arrieros y recolectando café en un ambiente..."
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Retorno a Bogotá",
-          "description": "Desayuno en el hotel. A la hora programada, traslado privado al aeropuerto de Pereira para abordar el vuelo de regreso a Bogotá, donde finalizará nues..."
+      "offers": {
+        "@type": "Offer",
+        "price": "1050",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-07-09",
+        "url": "https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/",
+        "offeredBy": {
+          "@type": "LocalBusiness",
+          "name": "Transfers & Tours Colombia",
+          "image": "https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg",
+          "telephone": "+57 314 6644303",
+          "email": "contacto@transferstours.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 93 # 12 - 14",
+            "addressLocality": "Bogotá",
+            "addressRegion": "Cundinamarca",
+            "postalCode": "110221",
+            "addressCountry": "CO"
+          }
         }
       }
-    ]
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "1050",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2026-07-09",
-    "url": "https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/",
-    "offeredBy": {
-      "@type": "LocalBusiness",
-      "name": "Transfers & Tours Colombia",
-      "image": "https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg",
-      "telephone": "+57 314 6644303",
-      "email": "contacto@transferstours.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle 93 # 12 - 14",
-        "addressLocality": "Bogotá",
-        "addressRegion": "Cundinamarca",
-        "postalCode": "110221",
-        "addressCountry": "CO"
-      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se coordina el traslado de llegada en el Aeropuerto El Dorado?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realizamos seguimiento en tiempo real al número de tu vuelo. Un conductor privado con vehículo climatizado te esperará en la puerta de desembarque del Aeropuerto El Dorado de Bogotá con un cartel con tu nombre [Fuente: Aerocivil]. El trayecto hacia el hotel tarda entre 30 y 45 minutos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué equipaje incluye el vuelo interno Bogotá - Pereira?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Todos nuestros tiquetes aéreos de conexión interna incluyen de forma predeterminada un artículo personal de mano de hasta 10 kg más una maleta registrada en bodega de hasta 23 kg para evitar recargos de aerolínea en el aeropuerto [Fuente: Regulaciones de Equipaje Aerocivil]."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué nivel de exigencia física tiene la caminata en el Valle de Cocora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una caminata de nivel bajo-medio por senderos naturales. Se realiza a un ritmo pausado apto para todo tipo de público. Recomendamos vestir calzado deportivo con buena tracción, bloqueador solar e hidratación [Fuente: Parques Nacionales de Colombia]."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué hay dos categorías de hoteles y cómo funciona la calculadora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para grupos de 5 o más personas, nuestra calculadora aplica un 5% de descuento directo sobre la tarifa fija de la categoría seleccionada para cubrir contingencias operativas [Fuente: Tarifas Operativas de Transfers & Tours]."
+          }
+        }
+      ]
     }
-  }
+  ]
 }
 </script>
 
@@ -180,7 +222,7 @@ window.tourData = {
   "geo_position": "4.609710;-74.071724",
   "geo_region": "CO-CUN",
   "geo_placename": "Bogotá",
-  "canonical_url": "https://tours.transferstours.com/tour-bogota-eje-cafetero-5-dias/",
+  "canonical_url": "https://transferstours.vip/tour-bogota-eje-cafetero-5-dias/",
   "intro_image": "assets/bogota_experience.png",
   "itinerary": [
     {
@@ -709,7 +751,7 @@ window.tourData = {
     <header class="header">
       <div class="container">
         <a href="../" class="logo" id="header-logo-link">
-          <img src="https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg" alt="Transfers & Tours Colombia Logo" />
+          <img src="https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg" alt="Transfers & Tours Colombia Logo" width="160" height="50" decoding="async" />
         </a>
         
         <div class="header-actions">
@@ -741,25 +783,25 @@ window.tourData = {
           <div class="hero-grid">
             <!-- Text and Badges -->
             <div class="hero-content">
-              <h1 id="main-hero-title" data-i18n="hero-h1"><span>Circuito Medellín</span> Extraordinario: 4 Días / 3 Noches</h1>
-              <p class="tagline" id="main-hero-tagline" data-i18n="hero-tagline">El circuito definitivo de viaje por Antioquia. Incluye traslados privados desde el aeropuerto JMC, hoteles seleccionados con desayunos, City Tour con Comuna 13, excursión a Guatapé y pasaporte para la Hacienda Nápoles.</p>
+              <h1 id="main-hero-title" data-i18n="hero-h1"><span>Circuito Bogotá + Eje Cafetero</span>: 5 Días / 4 Noches</h1>
+              <p class="tagline" id="main-hero-tagline" data-i18n="hero-tagline">El circuito definitivo de viaje combinando la capital y el corazón cafetero de Colombia. Incluye vuelos internos, traslados privados, 4 noches de hotel con desayunos, tours y asistencia médica.</p>
               
               <div class="hero-badges">
                 <div class="hero-badge-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="hero-badge-1">Recogida privada Aeropuerto JMC</span>
+                  <span data-i18n="hero-badge-1">Tiquetes aéreos internos BOG-PEI-BOG incluidos</span>
                 </div>
                 <div class="hero-badge-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="hero-badge-2">Hoteles con desayuno incluido</span>
+                  <span data-i18n="hero-badge-2">Hoteles Estándar o Premium con desayunos</span>
                 </div>
                 <div class="hero-badge-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="hero-badge-3">City Tour Comuna 13 + Metro + Metrocable</span>
+                  <span data-i18n="hero-badge-3">Catedral de Sal de Zipaquirá, Monserrate y Salento</span>
                 </div>
                 <div class="hero-badge-item">
                   <i class="fa-solid fa-circle-check"></i>
-                  <span data-i18n="hero-badge-4">Asistencia médica local incluida</span>
+                  <span data-i18n="hero-badge-4">Asistencia médica local y traslados privados</span>
                 </div>
               </div>
             </div>
@@ -810,29 +852,29 @@ window.tourData = {
             <div class="badge-card">
               <i class="fa-solid fa-plane-arrival"></i>
               <div>
-                <h4 data-i18n="badge-1-title">Traslados Privados</h4>
-                <p data-i18n="badge-1-desc">Recogida y retorno exclusivo Aeropuerto JMC - Hotel en vehículo climatizado de turismo.</p>
+                <h4 data-i18n="badge-1-title">Vuelos Internos Incluidos</h4>
+                <p data-i18n="badge-1-desc">Tiquetes aéreos ida y vuelta Bogotá - Pereira con maleta de 23 kg en bodega incluidos.</p>
               </div>
             </div>
             <div class="badge-card">
               <i class="fa-solid fa-route"></i>
               <div>
-                <h4 data-i18n="badge-2-title">Soporte 24/7 en Ruta</h4>
-                <p data-i18n="badge-2-desc">Monitoreo y coordinación permanente de tus actividades y traslados en tiempo real.</p>
+                <h4 data-i18n="badge-2-title">Traslados Privados</h4>
+                <p data-i18n="badge-2-desc">Todos los traslados aeropuerto-hotel-aeropuerto en Bogotá y Pereira en servicio privado.</p>
               </div>
             </div>
             <div class="badge-card">
               <i class="fa-solid fa-shield-halved"></i>
               <div>
-                <h4 data-i18n="badge-3-title">Operador RNT N° 44180</h4>
-                <p data-i18n="badge-3-desc">Servicio de transporte formalizado y seguros de viaje locales para tu tranquilidad.</p>
+                <h4 data-i18n="badge-3-title">Catedral de Sal</h4>
+                <p data-i18n="badge-3-desc">Visita guiada a la Catedral de Sal de Zipaquirá y entradas incluidas en el circuito.</p>
               </div>
             </div>
             <div class="badge-card">
               <i class="fa-solid fa-bed"></i>
               <div>
-                <h4 data-i18n="badge-4-title">Hospedaje de Confianza</h4>
-                <p data-i18n="badge-4-desc">Selecciona entre las mejores zonas seguras de El Poblado o Laureles con desayuno americano.</p>
+                <h4 data-i18n="badge-4-title">Hoteles de Calidad</h4>
+                <p data-i18n="badge-4-desc">Selección de alojamiento en Bogotá y el Eje Cafetero con desayuno americano diario.</p>
               </div>
             </div>
           </div>
@@ -844,6 +886,8 @@ window.tourData = {
            ========================================================================== -->
       <section class="seo-intro-section" id="about-tour">
         <div class="container">
+          
+
           <div class="seo-intro-grid">
             <div class="seo-text">
               <h2 style="margin-bottom: 24px;" data-i18n="intro-title">Descubre lo mejor de <span>Bogotá y el Eje Cafetero</span> en un solo viaje</h2>
@@ -853,6 +897,52 @@ window.tourData = {
             </div>
             <div class="seo-img">
               <img src="assets/bogota_experience.png" alt="Experiencia de viaje" />
+            </div>
+          </div>
+
+          
+          <!-- GEO Technical Specifications Table -->
+          <div class="geo-specs-container" style="margin-top: 36px; margin-bottom: 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h3 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-table-list" style="color: #022aa6;"></i> Ficha Técnica y Verificación de Servicio (GEO / LLMO)
+            </h3>
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #334155;">
+                <thead>
+                  <tr style="background: #f8fafc; text-align: left; border-bottom: 2px solid #e2e8f0;">
+                    <th style="padding: 12px 16px; font-weight: 600;">Parámetro de Servicio</th>
+                    <th style="padding: 12px 16px; font-weight: 600;">Especificación Garantizada</th>
+                    <th style="padding: 12px 16px; font-weight: 600;">Fuente de Verificación / Entidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Duración del Circuito</td>
+                    <td style="padding: 12px 16px;">5 Días / 4 Noches (Bogotá, Tatacoa, San Agustín)</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: ANATO]</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Patrimonio & Arqueología</td>
+                    <td style="padding: 12px 16px;">Parque Arqueológico de San Agustín y Lavapatas (UNESCO)</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: UNESCO]</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Turismo de Naturaleza</td>
+                    <td style="padding: 12px 16px;">Desierto de la Tatacoa (5 Zonas), Astronomía y Río Magdalena</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: ProColombia]</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Transporte y Registro</td>
+                    <td style="padding: 12px 16px;">Vehículos privados climatizados + Vuelo interno + RNT N° 44180</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: Operador RNT N° 44180]</span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Calidad de Servicio</td>
+                    <td style="padding: 12px 16px;">Excelente satisfacción de viajeros y guías locales certificados</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: TripAdvisor]</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -865,7 +955,7 @@ window.tourData = {
         <div class="container">
           <div class="section-header">
             <h2 data-i18n="itinerary-title">Cronograma Detallado</h2>
-            <p data-i18n="itinerary-subtitle">Itinerario optimizado de 4 días para aprovechar al máximo el turismo en la ciudad, naturaleza y parques temáticos.</p>
+            <p data-i18n="itinerary-subtitle">Itinerario optimizado de 5 días para aprovechar al máximo el turismo en la capital y la región cafetera.</p>
           </div>
           <div class="itinerary-container" id="itinerary-main-accordion">
             
@@ -1169,7 +1259,7 @@ window.tourData = {
       <section class="calculator-section" id="quote-calculator">
         <div class="container">
           <div class="section-header">
-            <h2 data-i18n="calc-title">Calculadora de Tarifas de Medellín</h2>
+            <h2 data-i18n="calc-title">Calculadora de Tarifas Bogotá + Eje Cafetero</h2>
             <p data-i18n="calc-subtitle">Selecciona el número de personas y tu opción de hotel preferida para calcular el precio total en dólares (USD).</p>
           </div>
 
@@ -1192,14 +1282,14 @@ window.tourData = {
                 <div class="option-selectors">
                   <div class="option-card active" id="opt-alejandria">
                     <div class="option-info">
-                      <span class="option-title" data-i18n="calc-title-alejandria">Hotel Alejandría</span>
-                      <span class="option-desc" data-i18n="calc-desc-alejandria">El Poblado, sector exclusivo. Desayuno incluido.</span>
+                      <span class="option-title" data-i18n="calc-title-alejandria">Opción Estándar (Andes Plaza + Mokawa)</span>
+                      <span class="option-desc" data-i18n="calc-desc-alejandria">Bogotá y Armenia/Pereira. Desayuno incluido.</span>
                     </div>
                   </div>
                   <div class="option-card" id="opt-eutopiq">
                     <div class="option-info">
-                      <span class="option-title" data-i18n="calc-title-eutopiq">Hotel Eutopiq</span>
-                      <span class="option-desc" data-i18n="calc-desc-eutopiq">La 70 / Laureles, sector vibrante. Desayuno incluido.</span>
+                      <span class="option-title" data-i18n="calc-title-eutopiq">Opción Premium (Dorado 95 + Combia)</span>
+                      <span class="option-desc" data-i18n="calc-desc-eutopiq">Hoteles top e históricos. Desayuno incluido.</span>
                     </div>
                   </div>
                 </div>
@@ -1241,7 +1331,7 @@ window.tourData = {
         <div class="container">
           <div class="section-header">
             <h2 data-i18n="test-title">Opiniones de <span>Nuestros Pasajeros</span></h2>
-            <p data-i18n="test-subtitle">Clientes reales que han disfrutado de este itinerario completo de 4 días en Medellín.</p>
+            <p data-i18n="test-subtitle">Clientes reales que han disfrutado de este itinerario.</p>
           </div>
 
           <div class="testimonials-grid">
@@ -1250,7 +1340,7 @@ window.tourData = {
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p data-i18n="test-1-text">"La recogida privada en el aeropuerto JMC fue sumamente puntual. El City Tour por el centro y el Graffitour en la Comuna 13 junto al guía local fue lo mejor de nuestra llegada. El Hotel Alejandría tiene unas instalaciones divinas."</p>
+              <p data-i18n="test-1-text"></p>
               <div class="author-info">
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Paula Restrepo" />
                 <div class="author-meta">
@@ -1265,7 +1355,7 @@ window.tourData = {
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p data-i18n="test-2-text">"El paseo en barco por Guatapé y la subida al Peñol fueron fabulosos. La excursión de un día completo a la Hacienda Nápoles cubrió perfectamente todas las áreas de fauna e historia. Volveremos a reservar con ustedes!"</p>
+              <p data-i18n="test-2-text"></p>
               <div class="author-info">
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Mark Thompson" />
                 <div class="author-meta">
@@ -1280,7 +1370,7 @@ window.tourData = {
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p data-i18n="test-3-text">"Excelente logística terrestre. Nos hospedamos en el Hotel Eutopiq en Laureles y el sector es hermoso, seguro y lleno de restaurantes. La atención telefónica 24/7 estuvo pendiente de nosotros todo el tiempo."</p>
+              <p data-i18n="test-3-text"></p>
               <div class="author-info">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Beatriz da Silva" />
                 <div class="author-meta">
@@ -1393,6 +1483,6 @@ window.tourData = {
     </div>
 
     <!-- Local Application Javascript Logic -->
-    <script src="app.js" charset="UTF-8"></script>
+    <script src="app.js" charset="UTF-8" defer></script>
   </body>
 </html>

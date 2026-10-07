@@ -5,7 +5,7 @@
 ## Tours Destacados
 
 ### Tour Compartido a la Catedral de Sal de Zipaquirá desde Bogotá
-- **URL**: https://tours.transferstours.com/tour-catedral-de-sal/
+- **URL**: https://transferstours.vip/tour-catedral-de-sal/
 - **Tipo de servicio**: Excursión diaria compartida y opción privada.
 - **Punto de inicio**: Recogida directa en hotel o alojamiento dentro de la zona urbana de Bogotá.
 - **Horario de salida**: Recogida a partir de las 7:30 AM; salida estricta a las 8:00 AM.
@@ -25,7 +25,7 @@
 - **Políticas**: Cancelación gratuita con aviso previo de 24 horas. Cumplimiento de la Ley 1581 de 2012 (Habeas Data).
 
 ### Tour Bogotá 3 Días / 2 Noches: Traslados, El Chicó, Monserrate y Catedral de Sal
-- **URL**: https://tours.transferstours.com/tour-bogota-3-dias/
+- **URL**: https://transferstours.vip/tour-bogota-3-dias/
 - **Tipo de servicio**: Paquete turístico integral B2C / B2B.
 - **Punto de inicio**: Recogida exclusiva en el Aeropuerto Internacional El Dorado (BOG) a la llegada.
 - **Hospedaje**: 2 noches de alojamiento en hotel seleccionado en la exclusiva Zona del Chicó / Parque de la 93 con desayunos diarios.
@@ -42,7 +42,7 @@
   - Hotel Chicó Premium (5★): Desde $440 USD por persona.
   - Descuento de grupo del 5% para grupos de 5+ personas.
 ### Tour Ruta de los Ancestros: Bogotá, Desierto de la Tatacoa y San Agustín 5 Días / 4 Noches
-- **URL**: https://tours.transferstours.com/tour-bogota-tatacoa-san-agustin-5-dias/
+- **URL**: https://transferstours.vip/tour-bogota-tatacoa-san-agustin-5-dias/
 - **Tipo de servicio**: Circuito turístico privado temático de arqueología, astronomía y ecoturismo [Fuente: ANATO & ProColombia].
 - **Punto de inicio**: Recogida directa en Bogotá (Hotel o Aeropuerto El Dorado BOG).
 - **Hospedaje**: 4 noches de alojamiento (1 noche Bogotá, 1 noche Villavieja/Tatacoa, 2 noches San Agustín) en categoría Estándar 3★ o Superior 4★ [Fuente: TripAdvisor].
@@ -63,9 +63,10 @@
 
 ## Contacto e Información Corporativa
 - **Sitio Web Oficial**: https://transferstours.com
-- **Subdominio de Reservas**: https://tours.transferstours.com
+- **Subdominio de Reservas**: https://transferstours.vip
 - **Teléfono / WhatsApp**: +57 314 6644303
 - **Correo Electrónico**: contacto@transferstours.com
 - **Dirección**: Calle 93 # 12 - 14, Bogotá, Cundinamarca, Colombia.
 - **Registro Legal**: Registro Nacional de Turismo (RNT N° 44180) - Ministerio de Comercio, Industria y Turismo de Colombia.
+
 

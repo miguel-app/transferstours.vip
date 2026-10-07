@@ -16,6 +16,18 @@ function switchLanguage(lang) {
   const activeBtn = document.getElementById(`lang-${lang}`);
   if (activeBtn) activeBtn.classList.add("active");
 
+  // Update DOM canonical tag self-referentially to prevent search engine cannibalization
+  const canonicalTag = document.querySelector("link[rel='canonical']");
+  if (canonicalTag && window.tourData && window.tourData.canonical_url) {
+    const baseUrl = window.tourData.canonical_url;
+    const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+    const selfCanonical = lang === 'es' ? cleanBaseUrl : `${cleanBaseUrl}?lang=${lang}`;
+    canonicalTag.setAttribute("href", selfCanonical);
+  }
+
+  // Update html lang attribute
+  document.documentElement.setAttribute("lang", lang);
+
   // Translate all elements with data-i18n
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");

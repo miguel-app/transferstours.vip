@@ -1,7 +1,6 @@
 /* ==========================================================================
    DESIGN SYSTEM & VARIABLES (Parque del Café - Eje Cafetero Theme)
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
   /* Colors - Corporate Standard Palette (Transfers & Tours) */
@@ -1076,7 +1075,7 @@ section {
   }
   
   .hero-content h1 {
-    font-size: 2.25rem;
+    font-size: 2.1rem;
   }
   
   .badges-grid {
@@ -1092,9 +1091,85 @@ section {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .header-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.85rem;
+    line-height: 1.25;
+  }
+  
+  .hero-content .tagline {
+    font-size: 0.95rem;
+  }
+  
+  .hero-form-container {
+    padding: 20px 16px;
+  }
+
+  .aeo-snippet-card {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .geo-specs-container {
+    padding: 16px;
+    margin-top: 24px;
+  }
+
+  .geo-specs-container table {
+    font-size: 0.85rem;
+  }
+
+  .geo-specs-container th, 
+  .geo-specs-container td {
+    padding: 8px 10px !important;
+  }
+
+  .price-value-large {
+    font-size: 1.8rem !important;
+    word-break: break-word;
+  }
+
+  .calc-display-card {
+    padding: 20px 16px;
+  }
+
+  .option-card {
+    padding: 12px 14px;
+  }
+
+  .toast {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 16px;
+  }
+
+  .whatsapp-floating {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+  .whatsapp-tooltip {
+    display: none;
+  }
+}
+
 @media (max-width: 576px) {
   .section-header h2 {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
   
   .badges-grid {
@@ -1103,22 +1178,69 @@ section {
   
   .header .container {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
   
   .day-content-inner {
     grid-template-columns: 1fr;
-    padding-left: 20px;
+    padding-left: 0;
   }
   
   .calc-panel {
-    padding: 24px;
+    padding: 20px 16px;
   }
   
   .footer-bottom {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.55rem;
+  }
+
+  .lang-switch {
+    gap: 4px;
+  }
+
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .contact-phone span {
+    font-size: 0.85rem;
+  }
+
+  .day-header {
+    padding: 14px 16px;
+  }
+
+  .day-number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .day-title-info h3 {
+    font-size: 0.95rem;
+  }
+
+  .faq-question h3 {
+    font-size: 0.95rem;
+  }
+
+  /* Prevent iOS Safari Auto-Zoom on Input Focus */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 16px !important;
   }
 }
 
@@ -1181,15 +1303,4 @@ section {
   opacity: 1;
   visibility: visible;
 }
-@media (max-width: 768px) {
-  .whatsapp-floating {
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-  }
-  .whatsapp-tooltip {
-    display: none;
-  }
-}
+

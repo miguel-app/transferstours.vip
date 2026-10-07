@@ -201,7 +201,7 @@ img {
    HERO SECTION
    ========================================================================== */
 .hero {
-  background: linear-gradient(135deg, rgba(2, 42, 146, 0.95), rgba(0, 28, 102, 0.98)), url('https://tours.transferstours.com/bogota-cartagena-5-dias/assets/hero-bg.png') no-repeat center center/cover;
+  background: linear-gradient(135deg, rgba(2, 42, 146, 0.95), rgba(0, 28, 102, 0.98)), url('https://transferstours.vip/bogota-cartagena-5-dias/assets/hero-bg.png') no-repeat center center/cover;
   padding: 100px 0 120px 0;
   color: var(--color-white);
   text-align: center;
@@ -649,3 +649,4 @@ input:focus, textarea:focus {
     padding: 25px 15px;
   }
 }
+

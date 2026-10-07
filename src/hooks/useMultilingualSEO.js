@@ -8,7 +8,7 @@ import { useLanguage, SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '../context/L
  * for React landing pages to avoid international keyword cannibalization.
  * 
  * @param {Object} options
- * @param {string} options.canonicalBaseUrl Base canonical URL (without query params, e.g. "https://tours.transferstours.com/tour-bogota-tatacoa-san-agustin-5-dias/")
+ * @param {string} options.canonicalBaseUrl Base canonical URL (without query params, e.g. "https://transferstours.vip/tour-bogota-tatacoa-san-agustin-5-dias/")
  * @param {Object} options.translations Translations dictionary by language code
  * @returns {Object} Multilingual SEO metadata
  */
@@ -85,3 +85,4 @@ export const useMultilingualSEO = ({ canonicalBaseUrl, translations = {} }) => {
     getLanguageUrl,
   };
 };
+

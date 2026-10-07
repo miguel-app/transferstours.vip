@@ -16,6 +16,18 @@ function switchLanguage(lang) {
   const activeBtn = document.getElementById(`lang-${lang}`);
   if (activeBtn) activeBtn.classList.add("active");
 
+  // Update DOM canonical tag self-referentially to prevent search engine cannibalization
+  const canonicalTag = document.querySelector("link[rel='canonical']");
+  if (canonicalTag && window.tourData && window.tourData.canonical_url) {
+    const baseUrl = window.tourData.canonical_url;
+    const cleanBaseUrl = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+    const selfCanonical = lang === 'es' ? cleanBaseUrl : `${cleanBaseUrl}?lang=${lang}`;
+    canonicalTag.setAttribute("href", selfCanonical);
+  }
+
+  // Update html lang attribute
+  document.documentElement.setAttribute("lang", lang);
+
   // Translate all elements with data-i18n
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
@@ -36,11 +48,11 @@ function switchLanguage(lang) {
 
 // Pricing Calculator configuration
 let paxCount = 2;
-let selectedHotel = "chico_estandar"; // "chico_estandar" or "chico_premium"
+let selectedHotel = "alejandria"; // "alejandria" or "eutopiq"
 
 function updatePrices() {
   const pricing = window.tourData.pricing;
-  let basePrice = pricing.base_prices[selectedHotel] || 320;
+  let basePrice = pricing.base_prices[selectedHotel] || 400;
 
   // Progressive Group Discount
   let discountPercent = 0;
@@ -98,7 +110,7 @@ function updatePrices() {
       savingInfo.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${savingTxt}`;
     } else {
       savingInfo.className = "calc-saving-alert";
-      const standardText = translations[currentLang]["calc-no-saving"] || "Tarifa estándar garantizada.";
+      const standardText = translations[currentLang]["calc-no-saving"] || "Tarifa estándar garantizada para grupos de 1 a 4 personas.";
       savingInfo.innerHTML = `<i class="fa-solid fa-circle-info"></i> <span>${standardText}</span>`;
     }
   }
@@ -187,21 +199,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 6. Hotel tier selectors
-  const optChicoEstandar = document.getElementById("opt-chico_estandar");
-  const optChicoPremium = document.getElementById("opt-chico_premium");
+  const optAlejandria = document.getElementById("opt-alejandria");
+  const optEutopiq = document.getElementById("opt-eutopiq");
 
-  if (optChicoEstandar && optChicoPremium) {
-    optChicoEstandar.addEventListener("click", () => {
-      selectedHotel = "chico_estandar";
-      optChicoEstandar.classList.add("active");
-      optChicoPremium.classList.remove("active");
+  if (optAlejandria && optEutopiq) {
+    optAlejandria.addEventListener("click", () => {
+      selectedHotel = "alejandria";
+      optAlejandria.classList.add("active");
+      optEutopiq.classList.remove("active");
       updatePrices();
     });
 
-    optChicoPremium.addEventListener("click", () => {
-      selectedHotel = "chico_premium";
-      optChicoPremium.classList.add("active");
-      optChicoEstandar.classList.remove("active");
+    optEutopiq.addEventListener("click", () => {
+      selectedHotel = "eutopiq";
+      optEutopiq.classList.add("active");
+      optAlejandria.classList.remove("active");
       updatePrices();
     });
   }
@@ -212,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCalcBook.addEventListener("click", () => {
       const pricing = window.tourData.pricing;
       let discountPercent = paxCount >= pricing.group_discount.min_pax ? pricing.group_discount.discount_percent : 0;
-      let basePrice = pricing.base_prices[selectedHotel] || 320;
+      let basePrice = pricing.base_prices[selectedHotel] || 400;
 
       const isRange = Array.isArray(basePrice);
       let finalPricePerPerson, totalReservationPrice;
@@ -227,9 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
         totalReservationPrice = finalPricePerPerson * paxCount;
       }
 
-      const hotelName = selectedHotel === "chico_estandar" 
-        ? (translations[currentLang]["calc-title-chico_estandar"] || "Hotel Chicó Estándar (4★)") 
-        : (translations[currentLang]["calc-title-chico_premium"] || "Hotel Chicó Premium (5★)");
+      const hotelName = selectedHotel === "alejandria" ? (translations[currentLang]["calc-title-alejandria"] || "Opción Estándar") : (translations[currentLang]["calc-title-eutopiq"] || "Opción Premium");
 
       const formatSingleVal = (val) => {
         if (pricing.currency === "USD") {
@@ -246,8 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return formatSingleVal(val);
       };
 
-      let message = `Hola Transfers & Tours. Quiero cotizar el paquete ${window.tourData.landing_name} para ${paxCount} personas. `;
-      message += `Opción de hotel: ${hotelName}. `;
+      let message = `Hola Transfers & Tours. Quiero cotizar el Circuito ${window.tourData.landing_name} para ${paxCount} personas. `;
+      message += `Hotel preferido: ${hotelName}. `;
       message += `Costo total estimado: ${formatCurrency(totalReservationPrice)}.`;
 
       // Trigger Google Ads conversion tracking event
@@ -280,13 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
       heroForm.addEventListener("submit", async (e) => {
         e.preventDefault();
 
-        // Check Habeas Data Checkbox if present
-        const habeasCb = document.getElementById("hero-habeas-checkbox");
-        if (habeasCb && !habeasCb.checked) {
-          alert("Debes aceptar la política de tratamiento de datos personales para continuar.");
-          return;
-        }
-
         const eventId = generateEventId();
         const submitBtn = document.getElementById("hero-submit-button");
         if (submitBtn) submitBtn.disabled = true;
@@ -296,12 +299,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const phoneVal = document.getElementById("hero-phone").value;
         const dateVal = document.getElementById("hero-date").value;
 
-        const hotelName = selectedHotel === "chico_estandar" 
-          ? (translations[currentLang]["calc-title-chico_estandar"] || "Hotel Chicó Estándar (4★)") 
-          : (translations[currentLang]["calc-title-chico_premium"] || "Hotel Chicó Premium (5★)");
+        const hotelName = selectedHotel === "alejandria" ? (translations[currentLang]["calc-title-alejandria"] || "Opción Estándar") : (translations[currentLang]["calc-title-eutopiq"] || "Opción Premium");
         const pricing = window.tourData.pricing;
         let discountPercent = paxCount >= pricing.group_discount.min_pax ? pricing.group_discount.discount_percent : 0;
-        let basePrice = pricing.base_prices[selectedHotel] || 320;
+        let basePrice = pricing.base_prices[selectedHotel] || 400;
 
         const isRange = Array.isArray(basePrice);
         let finalPricePerPerson, totalReservationPrice;
@@ -342,7 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
           tickets: paxCount,
           estimated_price: isRange ? finalPricePerPerson[0] * paxCount : finalPricePerPerson * paxCount, 
           special_requests: `Hotel: ${hotelName}. Formulario de Conversión Hero. Rango: ${formatCurrency(totalReservationPrice)}`,
-          message: `Solicitud de reserva del paquete ${window.tourData.landing_name}. Hotel: ${hotelName}. Fecha llegada: ${dateVal}. Total: ${formatCurrency(totalReservationPrice)}`,
+          message: `Solicitud de reserva de circuito ${window.tourData.landing_name}. Hotel: ${hotelName}. Fecha llegada: ${dateVal}. Rango: ${formatCurrency(totalReservationPrice)}`,
           status: "Nuevo Lead",
           meta_event_id: eventId,
           event_source_url: window.location.href
@@ -377,12 +378,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 fbq('track', 'Lead', {
                   content_name: window.tourData.landing_name,
                   value: isRange ? finalPricePerPerson[0] * paxCount : finalPricePerPerson * paxCount,
-                  currency: pricing.currency || 'USD'
+                  currency: pricing.currency || 'COP'
                 }, { eventID: eventId });
               }
 
               // Redirect to WhatsApp
-              const msgWa = `Hola Transfers & Tours. Acabo de registrarme para el paquete ${window.tourData.landing_name}. Mi nombre es ${nameVal}. Hotel preferido: ${hotelName}.`;
+              const msgWa = `Hola Transfers & Tours. Acabo de registrarme para el Circuito ${window.tourData.landing_name}. Mi nombre es ${nameVal}. Hotel preferido: ${hotelName}.`;
               window.location.href = `https://wa.me/573146644303?text=${encodeURIComponent(msgWa)}`;
             }, 3000);
           }
@@ -390,21 +391,24 @@ document.addEventListener("DOMContentLoaded", () => {
           heroForm.reset();
         } catch (err) {
           console.error("Error al enviar lead a Supabase:", err);
+          // Trigger Google Ads conversion tracking event
           if (typeof gtag === 'function') {
             gtag('event', 'conversion', {
               'send_to': 'AW-924615238/32FZCNHNvskcEMaE8rgD'
             });
           }
 
+          // Trigger Meta Pixel Lead event with deduplication ID (fallback)
           if (typeof fbq === 'function') {
             fbq('track', 'Lead', {
               content_name: window.tourData.landing_name,
               value: isRange ? finalPricePerPerson[0] * paxCount : finalPricePerPerson * paxCount,
-              currency: pricing.currency || 'USD'
+              currency: pricing.currency || 'COP'
             }, { eventID: eventId });
           }
 
-          const msgWaFallback = `Hola. Me registré en la landing del paquete ${window.tourData.landing_name}. Nombre: ${nameVal}, Email: ${emailVal}, Tel: ${phoneVal}, Fecha: ${dateVal}, Hotel: ${hotelName}.`;
+          // Fallback WhatsApp redirection on network error
+          const msgWaFallback = `Hola. Me registré en la landing de ${window.tourData.landing_name} pero hubo un error. Nombre: ${nameVal}, Email: ${emailVal}, Tel: ${phoneVal}, Fecha: ${dateVal}, Hotel: ${hotelName}.`;
           window.location.href = `https://wa.me/573146644303?text=${encodeURIComponent(msgWaFallback)}`;
         } finally {
           if (submitBtn) submitBtn.disabled = false;

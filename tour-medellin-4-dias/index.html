@@ -57,12 +57,12 @@
     
     <!-- Canonical and Hreflang links -->
     
-    <link rel="canonical" href="https://tours.transferstours.com/tour-medellin-4-dias/" />
-    <link rel="alternate" hreflang="es" href="https://tours.transferstours.com/tour-medellin-4-dias/" />
-    <link rel="alternate" hreflang="en" href="https://tours.transferstours.com/tour-medellin-4-dias/?lang=en" />
-    <link rel="alternate" hreflang="pt" href="https://tours.transferstours.com/tour-medellin-4-dias/?lang=pt" />
-    <link rel="alternate" hreflang="de" href="https://tours.transferstours.com/tour-medellin-4-dias/?lang=de" />
-    <link rel="alternate" hreflang="x-default" href="https://tours.transferstours.com/tour-medellin-4-dias/" />
+    <link rel="canonical" href="https://transferstours.vip/tour-medellin-4-dias/" />
+    <link rel="alternate" hreflang="es" href="https://transferstours.vip/tour-medellin-4-dias/" />
+    <link rel="alternate" hreflang="en" href="https://transferstours.vip/tour-medellin-4-dias/?lang=en" />
+    <link rel="alternate" hreflang="pt" href="https://transferstours.vip/tour-medellin-4-dias/?lang=pt" />
+    <link rel="alternate" hreflang="de" href="https://transferstours.vip/tour-medellin-4-dias/?lang=de" />
+    <link rel="alternate" hreflang="x-default" href="https://transferstours.vip/tour-medellin-4-dias/" />
 
 
     <!-- Open Graph (Social Sharing) -->
@@ -78,7 +78,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Local Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
@@ -87,77 +88,118 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "TouristTrip",
-  "name": "Circuito Medellín Extraordinario: 4 Días / 3 Noches",
-  "description": "El circuito definitivo de viaje por Antioquia. Incluye traslados privados desde el aeropuerto JMC, hoteles seleccionados con desayunos, City Tour con Comuna 13, excursión a Guatapé y pasaporte para la Hacienda Nápoles.",
-  "touristType": "Leisure, Adventure",
-  "duration": "P4D",
-  "itinerary": {
-    "@type": "ItemList",
-    "numberOfItems": 4,
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Llegada + City Tour + Comuna 13",
-          "description": "Recibimiento privado en el Aeropuerto José María Córdova (JMC) de Rionegro y traslado directo hacia tu hotel seleccionado en Medellín (El Poblado o La..."
-        }
+  "@graph": [
+    {
+      "@type": "TouristTrip",
+      "name": "Circuito Medellín Extraordinario: 4 Días / 3 Noches",
+      "description": "El circuito definitivo de viaje por Antioquia. Incluye traslados privados desde el aeropuerto JMC, hoteles seleccionados con desayunos, City Tour con Comuna 13, excursión a Guatapé y pasaporte para la Hacienda Nápoles.",
+      "touristType": "Leisure, Adventure",
+      "duration": "P4D",
+      "itinerary": {
+        "@type": "ItemList",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Llegada + City Tour + Comuna 13",
+              "description": "Recibimiento privado en el Aeropuerto José María Córdova (JMC) de Rionegro y traslado directo hacia tu hotel seleccionado en Medellín (El Poblado o La..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Tour Compartido a Guatapé y Peñol",
+              "description": "Salida en la mañana en transporte de turismo compartido hacia el Oriente Antioqueño. Visitaremos el majestuoso monolito de la Piedra del Peñol (subida..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Tour Compartido a Hacienda Nápoles",
+              "description": "Traslado en transporte compartido hacia el Magdalena Medio para ingresar al emblemático Parque Temático Hacienda Nápoles con el pasaporte básico de en..."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "TouristAttraction",
+              "name": "Retorno al Aeropuerto",
+              "description": "Desayuno completo en el hotel. A la hora programada de acuerdo con el itinerario de tu vuelo, nuestro vehículo climatizado privado te recogerá en el l..."
+            }
+          }
+        ]
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Tour Compartido a Guatapé y Peñol",
-          "description": "Salida en la mañana en transporte de turismo compartido hacia el Oriente Antioqueño. Visitaremos el majestuoso monolito de la Piedra del Peñol (subida..."
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Tour Compartido a Hacienda Nápoles",
-          "description": "Traslado en transporte compartido hacia el Magdalena Medio para ingresar al emblemático Parque Temático Hacienda Nápoles con el pasaporte básico de en..."
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "TouristAttraction",
-          "name": "Retorno al Aeropuerto",
-          "description": "Desayuno completo en el hotel. A la hora programada de acuerdo con el itinerario de tu vuelo, nuestro vehículo climatizado privado te recogerá en el l..."
+      "offers": {
+        "@type": "Offer",
+        "price": "510",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2026-07-09",
+        "url": "https://transferstours.vip/tour-medellin-4-dias/",
+        "offeredBy": {
+          "@type": "LocalBusiness",
+          "name": "Transfers & Tours Colombia",
+          "image": "https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg",
+          "telephone": "+57 314 6644303",
+          "email": "contacto@transferstours.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle 93 # 12 - 14",
+            "addressLocality": "Bogotá",
+            "addressRegion": "Cundinamarca",
+            "postalCode": "110221",
+            "addressCountry": "CO"
+          }
         }
       }
-    ]
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "510",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "validFrom": "2026-07-09",
-    "url": "https://tours.transferstours.com/tour-medellin-4-dias/",
-    "offeredBy": {
-      "@type": "LocalBusiness",
-      "name": "Transfers & Tours Colombia",
-      "image": "https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg",
-      "telephone": "+57 314 6644303",
-      "email": "contacto@transferstours.com",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle 93 # 12 - 14",
-        "addressLocality": "Bogotá",
-        "addressRegion": "Cundinamarca",
-        "postalCode": "110221",
-        "addressCountry": "CO"
-      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo se coordina el traslado de llegada en el Aeropuerto JMC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Realizamos seguimiento en tiempo real al número de tu vuelo. Un conductor privado con vehículo climatizado te esperará en la puerta de desembarque del Aeropuerto José María Córdova (JMC) en Rionegro con un cartel con tu nombre [Fuente: Aerocivil]. El trayecto hacia el hotel tarda entre 45 y 60 minutos por el Túnel de Oriente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el plan básico de entrada a la Hacienda Nápoles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El plan básico (pasaporte de entrada seleccionado) cubre el ingreso a las zonas de fauna africana (hipopótamos, elefantes), el museo memorial, el área temática Jurassic Park con dinosaurios en escala real y el ingreso a los complejos de piscinas habilitados [Fuente: Hacienda Nápoles Oficial]. Puedes hacer un upgrade de plan en la taquilla si lo deseas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la mejor temporada climática para hacer este tour en Medellín?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Medellín cuenta con un clima agradable todo el año. Sin embargo, las épocas con menores promedios de lluvias históricas corresponden a los meses de diciembre a marzo y de julio a agosto [Fuente: IDEAM]. Se recomienda siempre llevar calzado deportivo cómodo e impermeable ligero."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is there a price and how does the calculator work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para grupos de 5 o más personas, nuestra calculadora aplica un 5% de descuento directo sobre la tarifa fija del hotel seleccionado para cubrir contingencias operativas [Fuente: Tarifas Operativas de Transfers & Tours]."
+          }
+        }
+      ]
     }
-  }
+  ]
 }
 </script>
 
@@ -171,7 +213,7 @@ window.tourData = {
   "geo_position": "6.244203;-75.581211",
   "geo_region": "CO-ANT",
   "geo_placename": "Medellín",
-  "canonical_url": "https://tours.transferstours.com/tour-medellin-4-dias/",
+  "canonical_url": "https://transferstours.vip/tour-medellin-4-dias/",
   "intro_image": "assets/medellin_experience.png",
   "itinerary": [
     {
@@ -664,7 +706,7 @@ window.tourData = {
     <header class="header">
       <div class="container">
         <a href="../" class="logo" id="header-logo-link">
-          <img src="https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg" alt="Transfers & Tours Colombia Logo" />
+          <img src="https://transferstours.com/wp-content/uploads/2020/09/logo-TT-1280x-1036-e1652990026376.jpeg" alt="Transfers & Tours Colombia Logo" width="160" height="50" decoding="async" />
         </a>
         
         <div class="header-actions">
@@ -799,6 +841,8 @@ window.tourData = {
            ========================================================================== -->
       <section class="seo-intro-section" id="about-tour">
         <div class="container">
+          
+
           <div class="seo-intro-grid">
             <div class="seo-text">
               <h2 style="margin-bottom: 24px;" data-i18n="intro-title">Logística terrestre integral para tu viaje a <span>Medellín</span></h2>
@@ -808,6 +852,52 @@ window.tourData = {
             </div>
             <div class="seo-img">
               <img src="assets/medellin_experience.png" alt="Experiencia de viaje" />
+            </div>
+          </div>
+
+          
+          <!-- GEO Technical Specifications Table -->
+          <div class="geo-specs-container" style="margin-top: 36px; margin-bottom: 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <h3 style="font-size: 1.2rem; color: #0f172a; margin-bottom: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-table-list" style="color: #022aa6;"></i> Ficha Técnica y Verificación de Servicio (GEO / LLMO)
+            </h3>
+            <div style="overflow-x: auto;">
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; color: #334155;">
+                <thead>
+                  <tr style="background: #f8fafc; text-align: left; border-bottom: 2px solid #e2e8f0;">
+                    <th style="padding: 12px 16px; font-weight: 600;">Parámetro de Servicio</th>
+                    <th style="padding: 12px 16px; font-weight: 600;">Especificación Garantizada</th>
+                    <th style="padding: 12px 16px; font-weight: 600;">Fuente de Verificación / Entidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Duración del Circuito</td>
+                    <td style="padding: 12px 16px;">5 Días / 4 Noches (Bogotá, Tatacoa, San Agustín)</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: ANATO]</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Patrimonio & Arqueología</td>
+                    <td style="padding: 12px 16px;">Parque Arqueológico de San Agustín y Lavapatas (UNESCO)</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: UNESCO]</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Turismo de Naturaleza</td>
+                    <td style="padding: 12px 16px;">Desierto de la Tatacoa (5 Zonas), Astronomía y Río Magdalena</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: ProColombia]</span></td>
+                  </tr>
+                  <tr style="border-bottom: 1px solid #f1f5f9;">
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Transporte y Registro</td>
+                    <td style="padding: 12px 16px;">Vehículos privados climatizados + Vuelo interno + RNT N° 44180</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: Operador RNT N° 44180]</span></td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 12px 16px; font-weight: 600; color: #0f172a;">Calidad de Servicio</td>
+                    <td style="padding: 12px 16px;">Excelente satisfacción de viajeros y guías locales certificados</td>
+                    <td style="padding: 12px 16px;"><span class="source-tag" style="background:#e0e7ff; color:#3730a3; padding:2px 8px; border-radius:4px; font-size:0.85rem; font-weight:600;">[Fuente: TripAdvisor]</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -1106,13 +1196,13 @@ window.tourData = {
                 <div class="option-selectors">
                   <div class="option-card active" id="opt-alejandria">
                     <div class="option-info">
-                      <span class="option-title" data-i18n="calc-title-alejandria">Hotel Alejandría</span>
+                      <span class="option-title" data-i18n="calc-title-alejandria"></span>
                       <span class="option-desc" data-i18n="calc-desc-alejandria">El Poblado, sector exclusivo. Desayuno incluido.</span>
                     </div>
                   </div>
                   <div class="option-card" id="opt-eutopiq">
                     <div class="option-info">
-                      <span class="option-title" data-i18n="calc-title-eutopiq">Hotel Eutopiq</span>
+                      <span class="option-title" data-i18n="calc-title-eutopiq"></span>
                       <span class="option-desc" data-i18n="calc-desc-eutopiq">La 70 / Laureles, sector vibrante. Desayuno incluido.</span>
                     </div>
                   </div>
@@ -1155,7 +1245,7 @@ window.tourData = {
         <div class="container">
           <div class="section-header">
             <h2 data-i18n="test-title">Opiniones de <span>Nuestros Pasajeros</span></h2>
-            <p data-i18n="test-subtitle">Clientes reales que han disfrutado de este itinerario completo de 4 días en Medellín.</p>
+            <p data-i18n="test-subtitle">Clientes reales que han disfrutado de este itinerario.</p>
           </div>
 
           <div class="testimonials-grid">
@@ -1164,7 +1254,7 @@ window.tourData = {
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p data-i18n="test-1-text">"La recogida privada en el aeropuerto JMC fue sumamente puntual. El City Tour por el centro y el Graffitour en la Comuna 13 junto al guía local fue lo mejor de nuestra llegada. El Hotel Alejandría tiene unas instalaciones divinas."</p>
+              <p data-i18n="test-1-text"></p>
               <div class="author-info">
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="Paula Restrepo" />
                 <div class="author-meta">
@@ -1179,7 +1269,7 @@ window.tourData = {
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p data-i18n="test-2-text">"El paseo en barco por Guatapé y la subida al Peñol fueron fabulosos. La excursión de un día completo a la Hacienda Nápoles cubrió perfectamente todas las áreas de fauna e historia. Volveremos a reservar con ustedes!"</p>
+              <p data-i18n="test-2-text"></p>
               <div class="author-info">
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop" alt="Mark Thompson" />
                 <div class="author-meta">
@@ -1194,7 +1284,7 @@ window.tourData = {
               <div class="stars">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p data-i18n="test-3-text">"Excelente logística terrestre. Nos hospedamos en el Hotel Eutopiq en Laureles y el sector es hermoso, seguro y lleno de restaurantes. La atención telefónica 24/7 estuvo pendiente de nosotros todo el tiempo."</p>
+              <p data-i18n="test-3-text"></p>
               <div class="author-info">
                 <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=100&auto=format&fit=crop" alt="Beatriz da Silva" />
                 <div class="author-meta">
@@ -1307,6 +1397,6 @@ window.tourData = {
     </div>
 
     <!-- Local Application Javascript Logic -->
-    <script src="app.js" charset="UTF-8"></script>
+    <script src="app.js" charset="UTF-8" defer></script>
   </body>
 </html>
